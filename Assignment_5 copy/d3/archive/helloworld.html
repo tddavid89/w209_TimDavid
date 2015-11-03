@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<script type="text/javascript" src="d3.min.js"></script>
+	</head>
+
+	<body>
+		<svg height="200" width="300"><path fill="none" stroke-width="5" stroke="blue" d="M10,46L20,50L30,51L40,57L50,45L60,43L70,59L80,51L90,56L100,48L110,51L120,56L130,52L140,60L150,52L160,60L170,50L180,53L190,48L200,45L210,55L220,44L230,49L240,50L250,56L260,42L270,50L280,47L290,49L300,51"></path></svg>
+	</body>
+
+</html>
+
+<!--
+ var spaceCircles = [30, 70, 110];
+ 
+ var svgContainer = d3.select("body").append("svg")
+                                     .attr("width", 200)
+                                     .attr("height", 200);
+ 
+ var circles = svgContainer.selectAll("circle")
+                           .data(spaceCircles)
+                           .enter()
+                           .append("circle");
+
+var circleAttributes = circles
+                       .attr("cx", function (d) { return d; })
+                       .attr("cy", function (d) { return d; })
+                       .attr("r", 5 );
+-->
+
+<!--
+
+ //The data for our line
+ var lineData = [ { "x": 10,   "y": 46},
+ 				  { "x": 20,   "y": 50},
+ 				  { "x": 30,   "y": 51},
+ 				  { "x": 40,   "y": 57},
+ 				  { "x": 50,   "y": 45},
+ 				  { "x": 60,   "y": 43},
+ 				  { "x": 70,   "y": 59},
+ 				  { "x": 80,   "y": 51},
+ 				  { "x": 90,   "y": 56},
+ 				  { "x": 100,   "y": 48},
+ 				  { "x": 110,   "y": 51},
+ 				  { "x": 120,   "y": 56},
+ 				  { "x": 130,   "y": 52},
+ 				  { "x": 140,   "y": 60},
+ 				  { "x": 150,   "y": 52},
+ 				  { "x": 160,   "y": 60},
+ 				  { "x": 170,   "y": 50},
+ 				  { "x": 180,   "y": 53},
+ 				  { "x": 190,   "y": 48},
+ 				  { "x": 200,   "y": 45},
+ 				  { "x": 210,   "y": 55},
+ 				  { "x": 220,   "y": 44},
+ 				  { "x": 230,   "y": 49},
+ 				  { "x": 240,   "y": 50},
+ 				  { "x": 250,   "y": 56},
+ 				  { "x": 260,   "y": 42},
+ 				  { "x": 270,   "y": 50},
+ 				  { "x": 280,   "y": 47},
+ 				  { "x": 290,   "y": 49},
+ 				  { "x": 300,   "y": 51}
+                 ];
+ 
+ //This is the accessor function we talked about above
+ var lineFunction = d3.svg.line()
+                          .x(function(d) { return d.x; })
+                          .y(function(d) { return d.y; })
+                         .interpolate("linear");
+
+//The SVG Container
+var svgContainer = d3.select("body").append("svg")
+                                    .attr("width", 300)
+                                    .attr("height", 200);
+
+//The line SVG Path we draw
+var lineGraph = svgContainer.append("path")
+                            .attr("d", lineFunction(lineData))
+                            .attr("stroke", "blue")
+                            .attr("stroke-width", 2)
+                            .attr("fill", "none");
+-->
+<!--
+//The data for our line
+ var lineData = [ { "x": 10,   "y": 46},
+ 				  { "x": 20,   "y": 50},
+ 				  { "x": 30,   "y": 51},
+ 				  { "x": 40,   "y": 57},
+ 				  { "x": 50,   "y": 45},
+ 				  { "x": 60,   "y": 43},
+ 				  { "x": 70,   "y": 59},
+ 				  { "x": 80,   "y": 51},
+ 				  { "x": 90,   "y": 56},
+ 				  { "x": 100,   "y": 48},
+ 				  { "x": 110,   "y": 51},
+ 				  { "x": 120,   "y": 56},
+ 				  { "x": 130,   "y": 52},
+ 				  { "x": 140,   "y": 60},
+ 				  { "x": 150,   "y": 52},
+ 				  { "x": 160,   "y": 60},
+ 				  { "x": 170,   "y": 50},
+ 				  { "x": 180,   "y": 53},
+ 				  { "x": 190,   "y": 48},
+ 				  { "x": 200,   "y": 45},
+ 				  { "x": 210,   "y": 55},
+ 				  { "x": 220,   "y": 44},
+ 				  { "x": 230,   "y": 49},
+ 				  { "x": 240,   "y": 50},
+ 				  { "x": 250,   "y": 56},
+ 				  { "x": 260,   "y": 42},
+ 				  { "x": 270,   "y": 50},
+ 				  { "x": 280,   "y": 47},
+ 				  { "x": 290,   "y": 49},
+ 				  { "x": 300,   "y": 51}
+                 ];
+ 
+ //This is the accessor function we talked about above
+ var lineFunction = d3.svg.line()
+                          .x(function(d) { return d.x; })
+                          .y(function(d) { return d.y; })
+                         .interpolate("linear");
+
+//The SVG Container
+var svgContainer = d3.select("body").append("svg")
+                                    .attr("width", 300)
+                                    .attr("height", 200);
+
+//The line SVG Path we draw
+var lineGraph = svgContainer.append("path")
+                            .attr("d", lineFunction(lineData))
+                            .attr("stroke", "blue")
+                            .attr("stroke-width", 2)
+                            .attr("fill", "none");
+-->
